@@ -49,12 +49,13 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg) {
  */
 
 int main(int argc, char **argv) {
-	// initializing node
+// initializing node
   ros::init(argc, argv, "listener");
-	// creating node handle
+// creating node handle
   ros::NodeHandle n;
-	// subscribe to topic /talker1/talker/chatter
-  ros::Subscriber sub = n.subscribe("/talker1/talker/chatter", 1000, chatterCallback);
+// subscribe to topic /talker1/talker/chatter
+  ros::Subscriber sub = n.subscribe("/talker1/talker/chatter", 1000,
+                                    chatterCallback);
   ros::spin();
   return 0;
 }
