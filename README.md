@@ -1,4 +1,4 @@
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week10_HW/LICENSE.md)a
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week10_HW/LICENSE.md)
 # ENPM 808X PROGRAMMING ASSIGNMENT
 ## Description
 
