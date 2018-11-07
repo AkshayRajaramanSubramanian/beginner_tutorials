@@ -5,7 +5,7 @@ This package contains simple publisher and subscriber nodes, that allow the user
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]() file for details
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week10_HW/LICENSE.md) file for details
 
 ## Dependencies
 * ROS Kinetic
@@ -91,5 +91,15 @@ Run rqt_console
 ```
 rosrun rqt_console rqt_console
 ```
+<p align="center">
+<img src="/images/rqt_console_info.png">
+</p>
+<p align="center">
+<img src="/images/rqt_console_error.png">
+</p>
+
+
+
+
 
 
