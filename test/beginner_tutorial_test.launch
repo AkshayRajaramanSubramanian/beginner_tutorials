@@ -1,0 +1,6 @@
+<launch>
+		<node name="talker" pkg="beginner_tutorials" type="talker" output="screen" launch-prefix="xterm -e">
+			<param name="frequencyVal" value="1"/>
+		</node>
+		<test test-name="test_mynode" pkg="beginner_tutorials" type="test_mynode"/>
+</launch>
