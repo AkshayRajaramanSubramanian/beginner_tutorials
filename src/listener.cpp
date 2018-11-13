@@ -30,11 +30,11 @@
  * SOFTWARE.
  */
 
-#include "ros/ros.h"
+#include <ros/ros.h>
 #include "std_msgs/String.h"
 
 /**
- * @brief function that is executed if there is a message in topic
+ * @brief function that is executed if there is a message in topicrosb
  * @param msg msg object pointer
  */
 
@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
 // creating node handle
   ros::NodeHandle n;
 // subscribe to topic /talker1/talker/chatter
-  ros::Subscriber sub = n.subscribe("/talker1/talker/chatter", 1000,
+  ros::Subscriber sub = n.subscribe("/talker/chatter", 1000,
                                     chatterCallback);
   ros::spin();
   return 0;

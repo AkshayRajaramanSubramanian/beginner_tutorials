@@ -30,18 +30,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
+#include <tf/transform_broadcaster.h>
 #include <sstream>
 #include <string>
-
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "beginner_tutorials/custom.h"
 
+
+
+
 /*
  * initializing global variables
 */
-int frequencyVal;
+int frequencyVal = 10;
 std::string displayString = "Publishing this String";
 
 /**
@@ -54,12 +56,12 @@ bool changeString(beginner_tutorials::custom::Request &req,
                   beginner_tutorials::custom::Response &res) {
   if (req.text.empty()) {
     ROS_ERROR("Empty message received, closing node");
-    res.success = false;
+    res.check = false;
   } else {
     ROS_INFO("Received request");
     displayString = req.text;
     ROS_DEBUG("String received is: %s", displayString.c_str());
-    res.success = true;
+    res.check = true;
   }
   return true;
 }
@@ -88,13 +90,24 @@ int main(int argc, char **argv) {
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
 // setting publisher frequency
   ros::Rate loop_rate(frequencyVal);
+
+// setting up transform broadcaster
+  static tf::TransformBroadcaster br;
+  tf::Transform transform;
+// setting values for transform
+  transform.setOrigin(tf::Vector3(1, 2, 3));
+  tf::Quaternion q;
+  q.setRPY(0, 0, M_PI);
+  transform.setRotation(q);
+
+
   while (ros::ok()) {
     ROS_INFO("In ROS talker node");
     std::stringstream f;
     std::string fstring;
     f << frequencyVal;
     fstring = f.str();
-    ROS_INFO(fstring.c_str());
+    ROS_INFO("%s", fstring.c_str());
     std_msgs::String msg;
     std::stringstream ss;
     ROS_INFO("obtained: %s\n", displayString.c_str());
@@ -102,6 +115,9 @@ int main(int argc, char **argv) {
     msg.data = ss.str();
     ROS_INFO("%s", msg.data.c_str());
     chatter_pub.publish(msg);
+// broadcasting transform data
+    br.sendTransform(tf::StampedTransform
+                     (transform, ros::Time::now(), "talker", "world"));
     ros::spinOnce();
     loop_rate.sleep();
   }
