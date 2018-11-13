@@ -1,0 +1,10 @@
+<launch>
+	<arg
+		name="frequency"
+		default="10"
+	/>
+		<node name="listener" pkg="beginner_tutorials" type="listener"  ns="listener1" output="screen" launch-prefix="xterm -e"/>
+		<node name="talker" pkg="beginner_tutorials" type="talker"  ns="talker1" output="screen" launch-prefix="xterm -e">
+			<param name="frequencyVal" value="$(arg frequency)"/>
+		</node>
+</launch>
