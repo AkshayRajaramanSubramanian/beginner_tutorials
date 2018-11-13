@@ -1,4 +1,4 @@
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week10_HW/LICENSE.md)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week11_HW/LICENSE.md)
 # ENPM 808X PROGRAMMING ASSIGNMENT
 ## Description
 
@@ -6,7 +6,7 @@ This package contains simple publisher and subscriber nodes, that allow the user
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week10_HW/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week11_HW/LICENSE.md) file for details
 
 ## Dependencies
 * ROS Kinetic
@@ -44,7 +44,7 @@ rospy
 Clone beginner_tutorials repository
 ```
 cd path_to_catkin_workspace/src
-git clone -b Week10_HW --recursive https://github.com/AkshayRajaramanSubramanian/beginner_tutorials.git 
+git clone -b Week11_HW --recursive https://github.com/AkshayRajaramanSubramanian/beginner_tutorials.git 
 ```
 Build package and install using catkin
 ```
