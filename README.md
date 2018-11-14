@@ -97,6 +97,13 @@ rosbag play ${current rosbag file name}
 ```
 The output being published, as viewed through the listener node, should be the same data published by the talker in the first 15 seconds of running the launch file
 
+## ROStests
+To run the unittests for the nodes described above, run the following command in the terminal:
+```
+catkin_make run_tests
+```
+The unit test written for this assignment tests the service call 'change_string' that is advertised by the talker node.
+
 ## RQT Graph
 
 <p align="center">
