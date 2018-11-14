@@ -82,6 +82,21 @@ rosrun tf view_frames
 evince frames.pdf
 ```
 
+## ROSBag
+To view the rosbag data acquired while running the launch file, start roscore
+```
+roscore
+```
+On another terminal, run the listener node
+```
+rosrun beginner_tutorials listener
+```
+On the third terminal window, run rosbag play as follows
+```
+rosbag play ${current rosbag file name}
+```
+The output being published, as viewed through the listener node, should be the same data published by the talker in the first 15 seconds of running the launch file
+
 ## RQT Graph
 
 <p align="center">
