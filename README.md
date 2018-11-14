@@ -71,6 +71,9 @@ Verifying the TF frame using tf_echo and rqt_tf_tree :
 rosrun tf tf_echo talk world
 rosrun rqt_tf_tree rqt_tf_tree
 ```
+<p align="center">
+<img src="https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week11_HW/images/rqt_tf_tree.png">
+</p>
 running the tf view_frames tool
 ```
 rosrun tf view_frames
