@@ -1,5 +1,5 @@
-/home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/talker.cpp:45:  Static/global string variables are not permitted.  [runtime/string] [4]
-/home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/talker.cpp:53:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::custom::Request &req  [runtime/references] [2]
-/home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/talker.cpp:54:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::custom::Response &res  [runtime/references] [2]
-Done processing /home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/talker.cpp
-Total errors found: 3
+src/talker.cpp:55:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::custom::Request &req  [runtime/references] [2]
+src/talker.cpp:56:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::custom::Response &res  [runtime/references] [2]
+Done processing src/talker.cpp
+Total errors found: 2
+

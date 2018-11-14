@@ -1,3 +1,2 @@
-/usr/bin/cpplint.py /home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/listener.cpp 
-Done processing /home/akshay/Documents/softDev_catkin_ws/src/beginner_tutorials/src/listener.cpp
+Done processing /home/akshay/sdv_catkin_ws/src/beginner_tutorials/src/listener.cpp
 Total errors found: 0
