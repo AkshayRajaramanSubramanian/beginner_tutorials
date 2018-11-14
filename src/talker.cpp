@@ -38,14 +38,16 @@
 #include "beginner_tutorials/custom.h"
 
 
-
+ 
 
 /*
  * initializing global variables
 */
 int frequencyVal = 10;
-std::string displayString = "Publishing this String";
 
+struct publishObject{
+	std::string displayString;
+}display;
 /**
  * @brief function that runs on service call to change published text
  * @param req request object from service
@@ -59,8 +61,8 @@ bool changeString(beginner_tutorials::custom::Request &req,
     res.check = false;
   } else {
     ROS_INFO("Received request");
-    displayString = req.text;
-    ROS_DEBUG("String received is: %s", displayString.c_str());
+    display.displayString = req.text;
+    ROS_DEBUG("String received is: %s", display.displayString.c_str());
     res.check = true;
   }
   return true;
@@ -71,6 +73,7 @@ bool changeString(beginner_tutorials::custom::Request &req,
  * @return run status
  */
 int main(int argc, char **argv) {
+  display.displayString = "Publishing this String";
 // initializing node
   ros::init(argc, argv, "talker");
 // Creating node handle
@@ -102,7 +105,6 @@ int main(int argc, char **argv) {
 
 
   while (ros::ok()) {
-    ROS_INFO("In ROS talker node");
     std::stringstream f;
     std::string fstring;
     f << frequencyVal;
@@ -110,14 +112,14 @@ int main(int argc, char **argv) {
     ROS_INFO("%s", fstring.c_str());
     std_msgs::String msg;
     std::stringstream ss;
-    ROS_INFO("obtained: %s\n", displayString.c_str());
-    ss << displayString.c_str();
+    ROS_INFO("obtained: %s\n", display.displayString.c_str());
+    ss << display.displayString;
     msg.data = ss.str();
     ROS_INFO("%s", msg.data.c_str());
     chatter_pub.publish(msg);
 // broadcasting transform data
     br.sendTransform(tf::StampedTransform
-                     (transform, ros::Time::now(), "talker", "world"));
+                     (transform, ros::Time::now(), "talk", "world"));
     ros::spinOnce();
     loop_rate.sleep();
   }
