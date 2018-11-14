@@ -65,6 +65,18 @@ rosservice call /talker1/talker/change_string 'New string being published'
 ```
 This should change the published string to "New string being published"
 
+# TF
+Verifying the TF frame using tf_echo and rqt_tf_tree :
+```
+rosrun tf tf_echo talk world
+rosrun rqt_tf_tree rqt_tf_tree
+```
+running the tf view_frames tool
+```
+rosrun tf view_frames
+evince frames.pdf
+```
+
 ## RQT Graph
 
 <p align="center">
