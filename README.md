@@ -65,7 +65,7 @@ rosservice call /talker1/talker/change_string 'New string being published'
 ```
 This should change the published string to "New string being published"
 
-# TF
+## TF
 Verifying the TF frame using tf_echo and rqt_tf_tree :
 ```
 rosrun tf tf_echo talk world
