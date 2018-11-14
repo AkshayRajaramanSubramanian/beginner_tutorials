@@ -3,8 +3,10 @@
 		name="frequency"
 		default="10"
 	/>
-		<node name="listener" pkg="beginner_tutorials" type="listener"  ns="listener1" output="screen" launch-prefix="xterm -e"/>
-		<node name="talker" pkg="beginner_tutorials" type="talker"  ns="talker1" output="screen" launch-prefix="xterm -e">
+	<arg name="record" default="0"/>
+		<node name="listener" pkg="beginner_tutorials" type="listener" output="screen" launch-prefix="xterm -e"/>
+		<node name="talker" pkg="beginner_tutorials" type="talker"  output="screen">
 			<param name="frequencyVal" value="$(arg frequency)"/>
 		</node>
+		<node pkg="rosbag" type="record" name="record_talker" args="record -o /$(find beginner_tutorials)/bagfiles/myrosbag.bag -a --duration=15" if="$(arg record)"/>
 </launch>
