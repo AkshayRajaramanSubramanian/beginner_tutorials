@@ -55,7 +55,7 @@ source ./devel/setup.bash
 
 Running the launch file
 ```
-roslaunch beginner_tutorials beginner_tutorial.launch frequency:=1 // Run each command in a seperate terminal
+roslaunch beginner_tutorials beginner_tutorial.launch frequency:=1 record:=1// Run each command in a seperate terminal
 ``` 
 This will run the talker and listener node with a publishing rate of 1 per second.
 The default published string is "Publishing this String"
