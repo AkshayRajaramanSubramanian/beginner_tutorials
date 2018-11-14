@@ -72,9 +72,11 @@ rosrun tf tf_echo talk world
 rosrun rqt_tf_tree rqt_tf_tree
 ```
 <p align="center">
-<img src="https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week11_HW/images/rqt_tf_tree.png">
+  <img src="https://raw.githubusercontent.com/AkshayRajaramanSubramanian/beginner_tutorials/Week11_HW/images/rqt_tf_tree.png">
 </p>
+
 running the tf view_frames tool
+
 ```
 rosrun tf view_frames
 evince frames.pdf
@@ -83,7 +85,7 @@ evince frames.pdf
 ## RQT Graph
 
 <p align="center">
-<img src="/images/rqt_graph.png">
+  <img src="/images/rqt_graph.png">
 </p>
 
 ## Setting logger levels
@@ -104,10 +106,10 @@ Run rqt_console
 rosrun rqt_console rqt_console
 ```
 <p align="center">
-<img src="/images/rqt_console_info.png">
+  <img src="/images/rqt_console_info.png">
 </p>
 <p align="center">
-<img src="/images/rqt_console_error.png">
+  <img src="/images/rqt_console_error.png">
 </p>
 
 
